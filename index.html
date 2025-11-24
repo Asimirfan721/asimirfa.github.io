@@ -22,7 +22,7 @@
 						<h1>Asim Irfan<br />
 						Software Engineer <br>
 						Research Scholar </h1>
-						<p>Code today, create tomorrow—always learning, always building<a href="https://html5up.net/license">Creative Commons license</a>.</p>
+						<p>Code today, create tomorrow—always learning, always building Creative Commons license</a>.</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -36,7 +36,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Education </a></li>
+							<li><a href="index.html">Education </a></li>
 							<li><a href="generic.html">Research papers</a></li>
 							<li><a href="elements.html">Work Experience</a></li>
 						</ul>
@@ -68,9 +68,9 @@
             Statistics & Probability, and Linear Algebra—equipping me to architect intelligent, connected solutions.
         </p>
     </header>
-    <a href="#" class="image main">
+    <!-- <a href="#" class="image main">
         <img src="images/Degree.jpg" alt="Graduation cap on open book" />
-    </a>
+    </a> -->
     <ul class="actions special">
         <!-- <li><a href="#" class="button large">View Transcript</a></li> -->
     </ul>
@@ -81,7 +81,7 @@
 								<article>
 									<header>
 										<span class="date">Sep 8, 2023</span>
-										<h2><a href="#">Introduction to Artficial Intelligence<br />
+										<h2><a href="https://coursera.org/verify/TNGJRKKDF95Y">Introduction to Artficial Intelligence<br />
 										</a></h2>
 									</header>
 									<a href="https://coursera.org/verify/TNGJRKKDF95Y" class="image fit"><img src="images/AI introduction.jpg" alt="" /></a>
@@ -233,7 +233,7 @@ and Vector Spaces<br />
 								<h3>Email</h3>
 								<p><a href="#">rajpuasim721@gmail.com</a></p>
 							</section>
-							<section>
+							<!-- <section>
 								<h3>Social</h3>
 								<ul class="icons alt">
 									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
@@ -241,7 +241,7 @@ and Vector Spaces<br />
 									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
-							</section>
+							</section> -->
 						</section>
 					</footer>
 
@@ -260,6 +260,18 @@ and Vector Spaces<br />
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll("#nav .links a");
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.parentElement.classList.add("active");
+    }
+  });
+});
+</script>
 
 	</body>
 </html>
