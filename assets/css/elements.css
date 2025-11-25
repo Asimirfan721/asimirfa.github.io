@@ -1,0 +1,106 @@
+/* Elements / Experience page custom styles */
+
+body {
+  color: #222;
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0 1rem 0;
+  color: #005fa3;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Container tweaks */
+#main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Experience blocks */
+#main h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+  color: #0077cc;
+}
+
+#main p {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#main ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* Image placement */
+.image.right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: 220px;
+}
+
+.image.right img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Card-like appearance for each role block */
+#main > .role-card {
+  background: #fff;
+  border: 1px solid #e6eef8;
+  padding: 1.15rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(3, 70, 120, 0.04);
+  margin-bottom: 1rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+#main > .role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(3,70,120,0.06);
+}
+
+/* Date styling */
+.role-date {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  display:block;
+}
+
+/* Footer profiles styling small fix */
+footer#footer .icons li a {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .image.right {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+    max-width: 320px;
+  }
+
+  #main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  #main h3 { font-size: 1.1rem; }
+}
