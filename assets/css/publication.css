@@ -193,18 +193,18 @@ section.post {
 
 /* Header and Footer adjustments for better integration */
 header#header {
-    border-bottom: none;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 header#header .logo {
-    color: #ffffff; /* show logo in white by default */
+    color: #0096ff;
     font-weight: 700;
     letter-spacing: 0.1em;
-    transition: color 0.25s ease;
+    transition: all 0.3s ease;
 }
 
 header#header .logo:hover {
-    color: #0096ff; /* restore accent color on hover */
+    color: #005fa3;
 }
 
 /* Navigation Link Enhancement */
