@@ -1,0 +1,224 @@
+/* Publications Page - Custom Enhanced Styling */
+
+/* Hero Section for Publications */
+section.post {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.post > header.major {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 150, 255, 0.1) 0%, rgba(100, 200, 255, 0.05) 100%);
+    border-bottom: 3px solid #0096ff;
+    margin-bottom: 3rem;
+    border-radius: 8px 8px 0 0;
+}
+
+section.post > header.major h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0096ff 0%, #005fa3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    letter-spacing: -0.05em;
+}
+
+/* Publication Cards Grid */
+section.post {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Individual Publication Box Styling */
+.box {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0096ff, #005fa3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    border-color: #0096ff;
+    box-shadow: 0 12px 24px rgba(0, 150, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.box:hover::before {
+    transform: scaleX(1);
+}
+
+/* Publication Title Styling */
+.box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.box h3 a {
+    color: #0096ff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.box h3 a:hover {
+    color: #005fa3;
+    text-decoration: underline;
+}
+
+.box h3 a::after {
+    content: ' ↗';
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-left: 0.3rem;
+}
+
+.box h3 a:hover::after {
+    opacity: 1;
+}
+
+/* Publication Details Styling */
+.box p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.box p strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.box p br {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section.post > header.major {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    section.post > header.major h2 {
+        font-size: 2rem;
+    }
+
+    .box {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .box h3 {
+        font-size: 1.1rem;
+    }
+
+    .box p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section.post > header.major {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section.post > header.major h2 {
+        font-size: 1.6rem;
+    }
+
+    section.post {
+        padding: 0 0.5rem;
+        gap: 1.5rem;
+    }
+
+    .box {
+        padding: 1.25rem;
+        border-radius: 6px;
+    }
+
+    .box h3 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .box p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Additional Enhancement: Publication Count Badge */
+.box::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: #0096ff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.box:hover::after {
+    opacity: 1;
+}
+
+/* Header and Footer adjustments for better integration */
+header#header {
+    border-bottom: 2px solid #f0f0f0;
+}
+
+header#header .logo {
+    color: #0096ff;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+header#header .logo:hover {
+    color: #005fa3;
+}
+
+/* Navigation Link Enhancement */
+#nav .links a {
+    transition: all 0.2s ease;
+}
+
+#nav .links a:hover,
+#nav .links a.active {
+    color: #0096ff;
+    border-bottom: 2px solid #0096ff;
+}
+
+/* Smooth scrolling and overall polish */
+html {
+    scroll-behavior: smooth;
+}
